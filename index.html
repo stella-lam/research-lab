@@ -29,7 +29,7 @@ footer{max-width:1180px;margin:auto;padding:0 20px 40px;color:var(--muted);font-
 </style>
 </head>
 <body>
-<header><div class="eyebrow">A private developmental psychology notebook</div><h1>Naomi's Little Research Lab</h1><p>Research-inspired activities to explore how a child notices, learns, remembers and makes sense of the world. Curious observation, not testing or diagnosis.</p></header>
+<header><div class="eyebrow">A private developmental psychology notebook</div><h1 id="appTitle">Naomi's Little Research Lab</h1><p>Research-inspired activities to explore how a child notices, learns, remembers and makes sense of the world. Curious observation, not testing or diagnosis.</p></header>
 <main>
 <div class="stats">
  <div class="stat"><strong id="dueCount">—</strong><span>In the age window today</span></div>
@@ -39,6 +39,7 @@ footer{max-width:1180px;margin:auto;padding:0 20px 40px;color:var(--muted);font-
 </div>
 <div class="panel">
  <div class="fieldgrid">
+  <div><label for="childName">BABY'S NAME</label><input id="childName" type="text" value="Naomi" maxlength="40" autocomplete="off" placeholder="Enter baby name"></div>
   <div><label for="birth">CHILD'S DATE OF BIRTH</label><input id="birth" type="date" value="2026-11-06"></div>
   <div><label for="viewDate">CALENDAR / "TODAY" DATE</label><input id="viewDate" type="date"></div>
  </div>
@@ -86,6 +87,9 @@ const experiments = [
 ];
 const $=id=>document.getElementById(id);
 const todayISO=new Date().toISOString().slice(0,10);$("viewDate").value=todayISO;
+const savedChildName=localStorage.getItem("researchLabChildName");
+if(savedChildName!==null)$("childName").value=savedChildName;
+function updateChildName(){const name=$("childName").value.trim()||"Baby";document.title=name+"'s Little Research Lab";$("appTitle").textContent=name+"'s Little Research Lab";localStorage.setItem("researchLabChildName",$("childName").value.trim());}
 let tab="list", monthCursor=new Date();monthCursor.setDate(1);
 let records=JSON.parse(localStorage.getItem("naomiLabRecords")||"{}");
 let prepChecks=JSON.parse(localStorage.getItem("naomiLabPrep")||"{}");
@@ -115,6 +119,8 @@ function setStatus(id,s){records[id]=records[id]||{};records[id].status=s;if(s==
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("active",x===b));["list","today","calendar","completed"].forEach(x=>$(x+"View").hidden=x!==tab);render()}));
 ["birth","viewDate","search","category","age","status","sort"].forEach(id=>$(id).addEventListener("input",render));
 $("prevMonth").onclick=()=>{monthCursor.setMonth(monthCursor.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{monthCursor.setMonth(monthCursor.getMonth()+1);renderCalendar()};
+$("childName").addEventListener("input",updateChildName);
+updateChildName();
 init();
 </script>
 </body></html>
