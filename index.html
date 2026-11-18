@@ -26,10 +26,78 @@ dialog{border:0;border-radius:18px;max-width:720px;width:calc(100% - 24px);paddi
 footer{max-width:1180px;margin:auto;padding:0 20px 40px;color:var(--muted);font-size:12px}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){header{padding:24px 18px}.grid{grid-template-columns:1fr}.toolbar,.filters{grid-template-columns:1fr 1fr}.fieldgrid{grid-template-columns:1fr}.day{min-height:64px;padding:4px}.dot{font-size:9px}}
+
+/* Cherry blossom garden theme */
+:root{--ink:#493d45;--muted:#897b83;--paper:#fffaf8;--card:#fffefd;--line:#f0dfe3;--sage:#e4eadf;--sage2:#f2f5ee;--rose:#f8e5e9;--lav:#eee8f4;--gold:#f7efd9;--accent:#a86f83;--shadow:0 10px 30px #9e718014}
+body{background:radial-gradient(ellipse at 12% 6%,#fff1f3 0,transparent 28%),var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.garden-hero{position:relative;isolation:isolate;overflow:hidden;min-height:340px;padding:34px max(22px,calc((100% - 1180px)/2)) 42px;background:#f8e9ec;border:0;border-bottom:1px solid #efdce1;text-align:center}
+.hero-sky{position:absolute;inset:0;z-index:-1;overflow:hidden}.hero-landscape{width:100%;height:100%;min-height:340px;display:block}
+.hero-content{position:relative;max-width:720px;margin:auto;padding:4px 16px 0}
+.brand-mark{width:54px;height:54px;margin:0 auto 12px;padding:7px;border:1px solid #e8c9d1;border-radius:50%;background:#fff9f7d9;box-shadow:0 5px 18px #986b791a}.brand-mark svg{width:100%;height:100%}
+.eyebrow{color:#a06d80;letter-spacing:.19em;font:700 10px/1.5 ui-sans-serif,system-ui,sans-serif}
+h1{font:400 clamp(32px,4.8vw,52px)/1.08 Georgia,"Times New Roman",serif;color:#765565;letter-spacing:-.025em;margin:8px 0 12px}
+header p{color:#806f78;margin:0 auto;max-width:620px;font:15px/1.7 Georgia,serif}
+.hero-note{margin-top:20px;color:#a27b88;font:700 9px/1.5 ui-sans-serif,system-ui,sans-serif;letter-spacing:.24em}
+main{max-width:1180px;margin:26px auto;padding:0 20px 60px}
+.stat,.panel,.experiment,.detail{border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);background:var(--card)}
+.stat{padding:17px 18px;background:linear-gradient(145deg,#fffefd,#fff7f7)}.stat strong{font:400 29px Georgia,serif;color:#966a7d}.stat span,.small{font:12px/1.55 ui-sans-serif,system-ui,sans-serif;color:var(--muted)}
+.panel{padding:19px;margin-bottom:18px}.panel label,.detail label{font-family:ui-sans-serif,system-ui,sans-serif}
+input,select,textarea{border:1px solid #ead9df;background:#fffdfc;border-radius:11px;padding:10px 12px;font:13px ui-sans-serif,system-ui,sans-serif;color:var(--ink)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid #dba9b8;outline-offset:2px}
+.filters{gap:10px;margin-top:17px}
+button{border:1px solid #ead9df;background:#fffdfc;border-radius:11px;padding:9px 13px;font:13px ui-sans-serif,system-ui,sans-serif;color:#765565;transition:background .15s,border-color .15s}
+button:hover{filter:none;background:#fff0f3;border-color:#e8c5cf}
+button.primary{background:#a86f83;border-color:#a86f83;color:white}button.soft{background:#fbf0f2;border-color:#efdce2;color:#8b6072}
+.garden-nav{justify-content:center;gap:9px;margin:20px 0 24px;padding:9px;border:1px solid #f0dfe3;border-radius:18px;background:#fffdfbdc;box-shadow:0 7px 22px #9e71800b}
+.garden-nav button{border-color:transparent;background:transparent;border-radius:12px;padding:10px 14px;color:#806c76;font-size:12px}
+.garden-nav button span{color:#c18a9b;margin-right:6px}.garden-nav button.active{background:#f8e8ec;border-color:#efd5dd;color:#85586b}
+.section-title{margin:25px 0 13px;align-items:end}.section-title h2{font:400 26px/1.2 Georgia,serif;color:#795a68;margin:3px 0 0}
+.library-tools{display:flex;align-items:center;gap:12px}.view-toggle{display:flex;gap:4px;padding:3px;background:#f8edef;border-radius:11px}.view-toggle button{padding:5px 10px;border:0;background:transparent;font-size:17px}.view-toggle button.active{background:#fff;border:1px solid #eed9df;box-shadow:0 2px 6px #9e718014}
+.grid{gap:15px}.experiment{position:relative;padding:17px;gap:10px;min-height:242px;background:linear-gradient(155deg,#fffefd,#fff9f8);border-radius:17px}
+.experiment:before{content:"";position:absolute;top:0;left:18px;right:18px;height:3px;border-radius:0 0 4px 4px;background:var(--card-accent,#e7b8c5)}
+.experiment:nth-child(5n+2){--card-accent:#c9bddb}.experiment:nth-child(5n+3){--card-accent:#b9cbb7}.experiment:nth-child(5n+4){--card-accent:#e8d49f}.experiment:nth-child(5n+5){--card-accent:#b9cbd8}
+.experiment h3{font:400 21px/1.2 Georgia,serif;color:#654d5a}.experiment p{font:13px/1.55 ui-sans-serif,system-ui,sans-serif;color:#81737a}
+.pill{font:700 10px ui-sans-serif,system-ui,sans-serif;letter-spacing:.025em;background:#f0f4ed;color:#657a63}.pill.rose{background:#fae9ed;color:#966579}.pill.lav{background:#f0eaf6;color:#78668b}
+.meta,.card-actions,.check{font-family:ui-sans-serif,system-ui,sans-serif}.card-actions{align-items:center;flex-wrap:wrap}.card-actions button{font-size:11px}
+#cards.list-mode{grid-template-columns:1fr}#cards.list-mode .experiment{min-height:0;display:grid;grid-template-columns:minmax(150px,1fr) 2fr auto;align-items:center;gap:8px 16px;padding:17px 20px}
+#cards.list-mode .experiment .topline{grid-column:1;grid-row:1 / span 2;align-items:flex-start;flex-direction:column}
+#cards.list-mode .experiment h3{grid-column:2;grid-row:1}#cards.list-mode .experiment p{grid-column:2;grid-row:2}
+#cards.list-mode .experiment .meta{grid-column:2;grid-row:3}#cards.list-mode .experiment>.small{grid-column:2;grid-row:4}
+#cards.list-mode .experiment .card-actions{grid-column:3;grid-row:1 / span 4;flex-direction:column;align-items:flex-start}
+.tabs button,.section-title,.stat span{font-family:ui-sans-serif,system-ui,sans-serif}
+.calendar{gap:7px}.day{min-height:88px;border:1px solid #efdee3;border-radius:12px;background:#fffdfc;padding:8px;font:12px ui-sans-serif,system-ui,sans-serif}
+.day.today{border:2px solid #c58ca0;background:#fff5f7}.day .num{color:#815d6d}.dot{background:#f8e9ed;color:#835e6d;border-radius:6px}
+.calendar-agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.agenda-item{padding:12px 14px;border:1px solid #efdee3;border-radius:12px;background:#fffdfc;display:flex;gap:12px;align-items:center}.agenda-date{min-width:54px;text-align:center;color:#a06d80;font:12px ui-sans-serif,system-ui,sans-serif}.agenda-date strong{display:block;font:22px Georgia,serif}.agenda-item b{font:15px Georgia,serif;color:#765565}.agenda-item .small{display:block}
+.detail{font-family:ui-sans-serif,system-ui,sans-serif}.detail h2,.detail h3{font-family:Georgia,serif;color:#795a68}.detail h2{font-size:31px}.notice{background:#fbf3e6;border-color:#eee0c8;color:#75664b;border-radius:13px}
+footer{font-family:ui-sans-serif,system-ui,sans-serif}
+@media(max-width:850px){.garden-nav{flex-wrap:wrap}.garden-nav button{flex:1 1 40%}#cards.list-mode .experiment{grid-template-columns:1fr 2fr}#cards.list-mode .experiment .card-actions{grid-column:1 / -1;grid-row:auto;flex-direction:row}.calendar-agenda{grid-template-columns:1fr}}
+@media(max-width:560px){.garden-hero{min-height:310px;padding:25px 14px 32px}.hero-landscape{min-height:310px}.hero-content{padding:0}.brand-mark{width:48px;height:48px}h1{font-size:34px}.garden-nav{gap:4px;padding:6px}.garden-nav button{font-size:11px;padding:9px 7px}.stats{gap:9px}.stat{padding:13px}.toolbar,.filters{grid-template-columns:1fr 1fr}.library-tools{gap:7px}.section-title h2{font-size:23px}#cards.list-mode .experiment{display:flex;align-items:stretch}.calendar{gap:3px}.day{min-height:62px;padding:4px}.dot{font-size:9px}.agenda-item{padding:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
 </style>
 </head>
 <body>
-<header><div class="eyebrow">A private developmental psychology notebook</div><h1 id="appTitle">Naomi's Little Research Lab</h1><p id="introCopy">Research-inspired activities to explore how your baby notices, learns, remembers and makes sense of the world. Curious observation, not testing or diagnosis.</p></header>
+<header class="garden-hero">
+ <div class="hero-sky" aria-hidden="true">
+  <svg class="hero-landscape" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMid slice" role="presentation">
+   <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#fbe9ed"/><stop offset="1" stop-color="#fff8f4"/></linearGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#d8dfce"/><stop offset="1" stop-color="#b9c9b4"/></linearGradient></defs>
+   <rect width="1440" height="360" fill="url(#sky)"/><circle cx="1130" cy="105" r="54" fill="#fff8e8" opacity=".8"/>
+   <path d="M0 255 Q220 150 430 250 T850 230 T1440 245 V360 H0Z" fill="#e9dce0" opacity=".72"/><path d="M0 285 Q260 210 520 280 T1040 265 T1440 280 V360 H0Z" fill="url(#hill)"/>
+   <path d="M0 318 Q250 260 520 318 T1060 300 T1440 315 V360 H0Z" fill="#aebfae" opacity=".6"/>
+   <g fill="none" stroke="#8b766f" stroke-width="8" stroke-linecap="round" opacity=".65"><path d="M120 260 Q150 150 205 100 Q260 60 300 30"/><path d="M190 165 Q130 125 100 90"/><path d="M220 125 Q280 125 330 90"/><path d="M1260 260 Q1230 155 1170 110 Q1125 75 1090 35"/><path d="M1215 165 Q1270 130 1310 85"/></g>
+   <g fill="#eebdca" opacity=".95"><circle cx="95" cy="82" r="18"/><circle cx="120" cy="66" r="17"/><circle cx="142" cy="89" r="19"/><circle cx="117" cy="105" r="18"/><circle cx="285" cy="35" r="18"/><circle cx="309" cy="51" r="17"/><circle cx="330" cy="28" r="18"/><circle cx="1150" cy="90" r="19"/><circle cx="1175" cy="75" r="17"/><circle cx="1195" cy="99" r="18"/><circle cx="1080" cy="35" r="18"/><circle cx="1100" cy="18" r="16"/><circle cx="1320" cy="75" r="18"/><circle cx="1340" cy="57" r="17"/></g>
+   <g fill="#fff4f5" opacity=".9"><circle cx="105" cy="80" r="5"/><circle cx="295" cy="33" r="5"/><circle cx="1160" cy="88" r="5"/><circle cx="1330" cy="72" r="5"/></g>
+   <g fill="#fff" opacity=".48"><circle cx="450" cy="85" r="3"/><circle cx="620" cy="130" r="4"/><circle cx="950" cy="65" r="3"/><circle cx="1030" cy="150" r="3"/><circle cx="760" cy="55" r="2"/></g>
+  </svg>
+ </div>
+ <div class="hero-content">
+  <div class="brand-mark" aria-label="Cherry blossom emblem"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><g fill="#e8b3c2"><ellipse cx="32" cy="15" rx="8" ry="13"/><ellipse cx="48" cy="27" rx="8" ry="13" transform="rotate(72 48 27)"/><ellipse cx="42" cy="46" rx="8" ry="13" transform="rotate(144 42 46)"/><ellipse cx="22" cy="46" rx="8" ry="13" transform="rotate(216 22 46)"/><ellipse cx="16" cy="27" rx="8" ry="13" transform="rotate(288 16 27)"/></g><circle cx="32" cy="32" r="5" fill="#c58b70"/></svg></div>
+  <div class="eyebrow">A private developmental psychology notebook</div>
+  <h1 id="appTitle">Naomi's Little Research Lab</h1>
+  <p id="introCopy">A little garden of curiosity and discovery. Research-inspired activities to explore how your baby notices, learns, remembers and makes sense of the world.</p>
+  <div class="hero-note">OBSERVE · EXPLORE · DISCOVER</div>
+ </div>
+</header>
 <main>
 <div class="stats">
  <div class="stat"><strong id="dueCount">—</strong><span>In the age window today</span></div>
@@ -52,10 +120,10 @@ footer{max-width:1180px;margin:auto;padding:0 20px 40px;color:var(--muted);font-
   <div><label for="sort">SORT BY</label><select id="sort"><option value="start">Start date</option><option value="age">Age window</option><option value="duration">Duration</option><option value="title">Experiment name</option><option value="category">Research area</option></select></div>
  </div>
 </div>
-<div class="tabs"><button class="active" data-tab="list">Experiment library</button><button data-tab="today">What can I do today?</button><button data-tab="calendar">Calendar</button><button data-tab="completed">Completed & notes</button></div>
-<div id="listView"><div class="section-title"><h2>Experiment library</h2><span class="small" id="resultCount"></span></div><div class="grid" id="cards"></div></div>
+<nav class="tabs garden-nav" aria-label="Research lab sections"><button class="active" data-tab="list"><span>✿</span> Experiment library</button><button data-tab="today"><span>❀</span> Today's discoveries</button><button data-tab="calendar"><span>✧</span> Research calendar</button><button data-tab="completed"><span>❋</span> Completed & notes</button></nav>
+<div id="listView"><div class="section-title"><div><div class="eyebrow">EXPLORE THE COLLECTION</div><h2>Experiment library</h2></div><div class="library-tools"><span class="small" id="resultCount"></span><div class="view-toggle" role="group" aria-label="Experiment layout"><button type="button" class="active" id="gridMode" aria-pressed="true" title="Grid view">▦</button><button type="button" id="listMode" aria-pressed="false" title="List view">☷</button></div></div></div><div class="grid" id="cards"></div></div>
 <div id="todayView" hidden><div class="section-title"><h2>Available in this age window</h2><span class="small" id="todayLabel"></span></div><div class="grid" id="todayCards"></div></div>
-<div id="calendarView" hidden><div class="section-title"><h2 id="monthTitle">Calendar</h2><div><button id="prevMonth">←</button> <button id="nextMonth">→</button></div></div><div class="calendar" id="calendar"></div><p class="small">Experiments appear on the first recommended day of their age window. The activity remains available throughout its full window.</p></div>
+<div id="calendarView" hidden><div class="section-title"><h2 id="monthTitle">Calendar</h2><div><button id="prevMonth">←</button> <button id="nextMonth">→</button></div></div><div class="calendar" id="calendar"></div><p class="small">Experiments appear on the first recommended day of their age window. The activity remains available throughout its full window.</p><div class="section-title agenda-heading"><h2>In this month's garden</h2><span class="small">Upcoming experiment starts</span></div><div id="calendarAgenda" class="calendar-agenda"></div></div>
 <div id="completedView" hidden><div class="section-title"><h2>Completed experiments & observations</h2></div><div id="completedList"></div></div>
 <div class="notice"><b>Safety and interpretation:</b> These are gentle, optional home adaptations of research paradigms, not validated assessments. Never withhold care, create fear, force participation or continue when your baby is tired or distressed. A single response cannot establish a developmental ability or diagnosis. Follow safe-sleep and age-appropriate object safety guidance.</div>
 </main>
@@ -126,7 +194,7 @@ function filtered(){let q=$("search").value.toLowerCase(),cat=$("category").valu
 function render(){let a=filtered();$("cards").innerHTML=a.map(card).join("")||'<div class="empty">No experiments match these filters.</div>';$("resultCount").textContent=a.length+" experiments";let due=experiments.filter(e=>status(e)==="ready");$("dueCount").textContent=due.length;$("doneCount").textContent=Object.values(records).filter(r=>r.status==="done").length;$("prepCount").textContent=Object.keys(prepChecks).filter(isPrepDone).length;$("savedCount").textContent=Object.values(records).filter(r=>r.notes||r.observations).length;$("todayLabel").textContent=dateFmt(selectedDate());$("todayCards").innerHTML=due.map(card).join("")||'<div class="empty">No experiments are currently in their recommended age window. Try changing the selected date or explore upcoming experiments.</div>';renderCompleted();renderCalendar()}
 function toggleDone(id,v){records[id]=records[id]||{};records[id].status=v?"done":"";if(v&&!records[id].completedDate)records[id].completedDate=$("viewDate").value;save();render()}
 function renderCompleted(){let a=experiments.filter(e=>records[e.id]?.status==="done"||records[e.id]?.notes||records[e.id]?.observations);$("completedList").innerHTML=a.length?a.map(e=>`<div class="panel"><div class="topline"><b>${e.title}</b><span class="status">${records[e.id]?.status||"Notes saved"}</span></div><div class="small">${records[e.id]?.completedDate||"No completion date recorded"}</div><p>${escapeHtml(records[e.id]?.notes||records[e.id]?.observations||"No notes yet.")}</p><button onclick="openDetail('${e.id}')">View / edit record</button></div>`).join(""):'<div class="empty">No completed experiments or saved notes yet.</div>'}
-function renderCalendar(){let y=monthCursor.getFullYear(),m=monthCursor.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0);$("monthTitle").textContent=first.toLocaleDateString(undefined,{month:"long",year:"numeric"});let out=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d=>`<div class="dayname">${d}</div>`).join("");for(let i=0;i<first.getDay();i++)out+=`<div class="day muted"></div>`;for(let n=1;n<=last.getDate();n++){let d=new Date(y,m,n),mo=ageMonths(d),list=experiments.filter(e=>{let start=windowStart(e),end=windowEnd(e);return d.toDateString()===start.toDateString()});out+=`<div class="day ${d.toDateString()===selectedDate().toDateString()?"today":""}"><span class="num">${n}</span>${list.map(e=>`<span class="dot" title="${e.title}">${e.title}</span>`).join("")}</div>`}$("calendar").innerHTML=out}
+function renderCalendar(){let y=monthCursor.getFullYear(),m=monthCursor.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0);$("monthTitle").textContent=first.toLocaleDateString(undefined,{month:"long",year:"numeric"});let out=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d=>`<div class="dayname">${d}</div>`).join("");for(let i=0;i<first.getDay();i++)out+=`<div class="day muted"></div>`;for(let n=1;n<=last.getDate();n++){let d=new Date(y,m,n),mo=ageMonths(d),list=experiments.filter(e=>{let start=windowStart(e),end=windowEnd(e);return d.toDateString()===start.toDateString()});out+=`<div class="day ${d.toDateString()===selectedDate().toDateString()?"today":""}"><span class="num">${n}</span>${list.map(e=>`<span class="dot" title="${e.title}">${e.title}</span>`).join("")}</div>`}$("calendar").innerHTML=out;let monthItems=experiments.filter(e=>{let d=windowStart(e);return d.getFullYear()===y&&d.getMonth()===m}).sort((a,b)=>windowStart(a)-windowStart(b));$("calendarAgenda").innerHTML=monthItems.length?monthItems.map(e=>{let d=windowStart(e);return `<div class="agenda-item"><div class="agenda-date"><strong>${d.getDate()}</strong>${d.toLocaleDateString(undefined,{month:"short"})}</div><div><b>${e.title}</b><span class="small">${e.cat} · Age ${e.min}–${e.max} months</span></div></div>`}).join(""):'<div class="empty">No experiment windows begin this month.</div>'}
 function escapeHtml(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function openDetail(id){let e=experiments.find(x=>x.id===id),r=records[id]||{},checks=prepChecks[id]||[];let start=windowStart(e),end=windowEnd(e);$("detail").innerHTML=`<button class="close" onclick="$('modal').close()">Close ✕</button><div class="eyebrow">${e.cat} · ${e.basis}</div><h2>${e.title}</h2><p>${babyText(e.question)}</p><div class="fieldgrid"><div><b>Recommended window</b><br>${e.min}–${e.max} months</div><div><b>Suggested start date</b><br>${dateFmt(start)}</div><div><b>Available through</b><br>${dateFmt(end)}</div><div><b>Time</b><br>${e.duration} min activity · ${e.prepTime} preparation</div></div><h3>What it measures</h3><p>${babyText(e.measure)}</p><h3>Materials</h3><ul>${e.materials.map(x=>`<li>${babyText(x)}</li>`).join("")}</ul><h3>Prepare before starting</h3>${e.prep.map((x,i)=>`<label class="check" style="margin:8px 0"><input type="checkbox" ${checks.includes(i)?"checked":""} onchange="setPrep('${id}',${i},this.checked)"> ${babyText(x)}</label>`).join("")}<h3>Procedure</h3><ol>${e.steps.map(x=>`<li>${babyText(x)}</li>`).join("")}</ol><h3>What to record</h3><ul>${e.record.map(x=>`<li>${babyText(x)}</li>`).join("")}</ul><h3>Scientific interpretation & limitations</h3><p>${babyText(e.caveat)}</p><h3>Research reference</h3><p>${e.source}<br><a href="${e.url}" target="_blank" rel="noopener">Open publication / source ↗</a></p><div class="notice">Research paradigm: ${e.basis} Age windows are approximate planning suggestions, not developmental deadlines.</div><h3>Observation record</h3><div class="fieldgrid"><div><label>DATE PERFORMED</label><input id="performed" type="date" value="${r.completedDate||$("viewDate").value}"></div><div><label>SESSION CONDITIONS</label><input id="conditions" placeholder="e.g. rested, after feed" value="${escapeHtml(r.conditions||"")}"></div></div><label style="margin-top:10px">OBSERVATIONS / MEASUREMENTS</label><textarea id="observations" rows="3" placeholder="Record what happened without interpreting it as a score…">${escapeHtml(r.observations||"")}</textarea><label style="margin-top:10px">REFLECTION / NOTES</label><textarea id="notes" rows="3" placeholder="Context, surprises, possible confounds, ideas for repeating…">${escapeHtml(r.notes||"")}</textarea><div class="card-actions" style="margin-top:14px"><button class="primary" onclick="saveRecord('${id}')">Save observations</button><button onclick="setStatus('${id}','done')">Mark completed</button><button onclick="setStatus('${id}','skipped')">Skip</button></div>`;$("modal").showModal()}
 function setPrep(id,i,v){let a=prepChecks[id]||[];prepChecks[id]=v?[...new Set([...a,i])]:a.filter(x=>x!==i);save();render()}
@@ -135,6 +203,11 @@ function setStatus(id,s){records[id]=records[id]||{};records[id].status=s;if(s==
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("active",x===b));["list","today","calendar","completed"].forEach(x=>$(x+"View").hidden=x!==tab);render()}));
 ["birth","viewDate","search","category","age","status","sort"].forEach(id=>$(id).addEventListener("input",render));
 $("prevMonth").onclick=()=>{monthCursor.setMonth(monthCursor.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{monthCursor.setMonth(monthCursor.getMonth()+1);renderCalendar()};
+
+// Library layout switcher
+$("gridMode").addEventListener("click",()=>setCardView("grid"));
+$("listMode").addEventListener("click",()=>setCardView("list"));
+function setCardView(mode){$("cards").classList.toggle("list-mode",mode==="list");$("gridMode").classList.toggle("active",mode==="grid");$("listMode").classList.toggle("active",mode==="list");$("gridMode").setAttribute("aria-pressed",String(mode==="grid"));$("listMode").setAttribute("aria-pressed",String(mode==="list"));}
 $("childName").addEventListener("input",updateChildName);
 updateChildName();
 init();
